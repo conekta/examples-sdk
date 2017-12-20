@@ -1,1 +1,196 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic style</title>
+  <meta charset="UTF-8">
+  <script src="here will be conektasdk library"></script>
+  <script src="./javascript/index.js"></script>
+  <style>
+    body{
+     background: #ccc; 
+    }
+    .field-inline input, .field input {
+      width: 100%;
+      font-size: 16px;
+      border: 1px solid rgb(204, 204, 204);
+      border-radius: 5px;
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      box-sizing: border-box; 
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+    .field{
+      width: 100%;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+    .container{
+      border-radius: 5px;
+      padding: 40px;
+      background: #fff;
+      margin-top: 10%;
+      margin-right: 25%;
+      margin-left: 25%;
+    }
+    .pay-button input{
+      background: #ccc;
+      width: 100%;
+    }
+    .pay-button input:focus{   outline-width: 5px;  }
+    input:focus{
+        outline-width: 0px;
+    }
+    .field-inline{
+      margin-top: -10px;
+    }
+    .field-inline:before {
+      height: 100%;
+      width: 100%;
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .right{      
+      float: right;
+      width: 30%;
+    }
+    .left{
+      float: left;
+      width: 30%!important;
+    }
+
+    .grid-1{
+     float: left;
+      width: 20%!important;
+    }
+
+    .grid-2{
+     float: left;
+      width: 60%!important;
+    }
+    #date-custom{
+      border-radius: 0px;
+      border: 0px;
+      border-top: 2px solid rgb(204, 204, 204);
+      border-bottom: 2px solid rgb(204, 204, 204);      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form id="form-1" autocomplete="on">
+      <div class="field">
+        <input type="text" id="name" placeholder="nombre del tarjeta habiente">
+      </div>
+
+      <div class="field" id="card-number-1" style="height: 40px">
+      </div>
+
+      <div class="field">
+        <input type="text" id="date" placeholder="MM / YY">
+      </div>
+
+      <div class="field" id="cvc-number-1" style="height: 40px">
+      </div>
+
+      <div class="field pay-button">
+        <input type="submit" value='Pay'>
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <form id="form-2" autocomplete="on">
+      <div class="field">
+        <label for="name">Nombre del tarjeta habiente</label>
+        <input type="text" id="name" >
+      </div>
+
+      <div class="field" id="card-number-2" style="height: 50px">
+          <label for="">Numero de tarjeta</label>
+      </div>
+
+      <div class="field">
+        <label for="date">Fecha de Expiracion (mm/yy)</label>
+        <input type="text" id="date" >
+      </div>
+
+      <div class="field" id="cvc-number-2" style="height: 50px">
+          <label for="">Cvc</label>
+      </div>
+
+      <div class="field pay-button">
+        <input type="submit" value='Pay'>
+      </div>
+    </form>
+  </div>
+
+   <div class="container">
+    <form id="form-3" autocomplete="on">
+      <div class="field">
+        <input type="text" id="name" placeholder="Nombre del tarjeta habiente">
+      </div>
+
+      <div class="field" id="card-number-3" style="height: 40px">
+      </div>
+
+      <div class="field-inline">
+        <input class="left" type="text" id="date" placeholder="MM / YY ">
+        <div class="right" id="cvc-number-3" style="height: 40px; display: inline-block;"></div>
+      </div>
+
+
+      <div class="field pay-button">
+        <input type="submit" value='Pay'>
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <form id="form-4" autocomplete="on">
+      <div class="field">
+        <label for="name">Nombre del tarjeta habiente</label>
+        <input type="text" id="name" >
+      </div>
+
+      <div class="field" id="card-number-4" style="height: 40px">
+        <label for="">Numero de tarjeta</label>
+      </div>
+
+      <div class="field-inline">
+        <div class="left">
+          <label for="date">Expiracion (mm/yy)</label>
+          <input  type="text" id="date" >  
+        </div>
+        <div class="right">
+          <label for="date">Cvc</label>
+          <div id="cvc-number-4" style="height: 40px; display: inline-block;"></div>
+        </div>
+      </div>
+      <div class="field pay-button">
+        <input type="submit" value='Pay'>
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <form id="form-5" >
+      <div class="field">
+        <input type="text" id="name" placeholder="Tarjeta habiente">
+      </div>
+
+      <div class="field-inline">
+         <div class="grid-2" id="card-number-5" style="height: 40px; display:  inline-block;"></div>
+          <input class="grid-1"  type="text" id="date-custom" placeholder="MM / YY">  
+          <div class="grid-1" id="cvc-number-5" style="height: 40px; display: inline-block;"></div>
+      </div>
+
+      <div class="field pay-button">
+        <input type="submit" value='Pay'>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
