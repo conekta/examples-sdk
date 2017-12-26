@@ -1,69 +1,113 @@
- body{
-     background: #ccc; 
-    }
-    .field-inline input, .field input {
-      width: 100%;
-      font-size: 16px;
-      border: 1px solid rgb(204, 204, 204);
-      border-radius: 5px;
-      margin-bottom: 10px;
-      padding: 5px 10px;
-      box-sizing: border-box; 
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-    }
-    .field{
-      width: 100%;
-      margin-bottom: 5px;
-      margin-top: 5px;
-    }
-    .container{
-      border-radius: 5px;
-      padding: 40px;
-      background: #fff;
-      margin-top: 10%;
-      margin-right: 25%;
-      margin-left: 25%;
-    }
-    .pay-button input{
-      background: #ccc;
-      width: 100%;
-    }
-    .pay-button input:focus{   outline-width: 5px;  }
-    input:focus{
-        outline-width: 0px;
-    }
-    .field-inline{
-      margin-top: -10px;
-    }
-    .field-inline:before {
-      height: 100%;
-      width: 100%;
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .right{      
-      float: right;
-      width: 30%;
-    }
-    .left{
-      float: left;
-      width: 30%!important;
-    }
+  *{
+    font-family: 'Roboto', sans-serif;
+  }
+  body{
+   margin: 0px;
+   padding: 0px;
+   background: #fff; 
+  }
+  header{
+    color: #848282;
+    font-size: 16px;
+    margin: 0px;
+    padding: 150px;
+    text-align: center;
+  }
+  header > img{
+    width: 500px;
+  }
+  header > p{
+    font-size: 19px;
+    width: 800px;
+    margin: 0 auto;
+  }
+  .field-inline input, .field input {
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  .field{
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .container{
+    border-radius: 5px;
+    padding: 40px;
+    background: #fff;
+    margin-top: 10%;
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+  .pay-button input{
+    background: #45a5ad;
+    width: 100%;
+  }
+  .pay-button input:focus{   outline-width: 5px;  }
+  input:focus{
+      outline-width: 0px;
+  }
+  .field-inline{
+    margin-top: -10px;
+  }
+  .field-inline:before {
+    height: 100%;
+    width: 100%;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .right{      
+    float: right;
+    width: 30%;
+  }
+  .left{
+    float: left;
+    width: 30%!important;
+  }
 
-    .grid-1{
-     float: left;
-      width: 20%!important;
-    }
+  .grid-1{
+   float: left;
+    width: 20%!important;
+  }
 
-    .grid-2{
-     float: left;
-      width: 60%!important;
-    }
-    #date-custom{
-      border-radius: 0px;
-      border: 0px;
-      border-top: 2px solid rgb(204, 204, 204);
-      border-bottom: 2px solid rgb(204, 204, 204);      
-    }
+  .grid-2{
+   float: left;
+    width: 60%!important;
+  }
+  #form-date-5{
+    font-size: 15px;
+    border-radius: 0px;
+    border: 0px;
+    border-top: 2px solid rgb(204, 204, 204);
+    border-bottom: 2px solid rgb(204, 204, 204);      
+  }
+  #doc-button > button,#repo-button > button{
+    margin: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    font-size: 16px;
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    background: #66a6ff;
+  }
+  #doc-button > button{
+    background: #2d5082;
+  }
+  .github-corner:hover .octo-arm{
+    animation:octocat-wave 560ms ease-in-out
+  }
+  @keyframes octocat-wave{
+    0%,100%{transform:rotate(0)}
+    20%,60%{transform:rotate(-25deg)}
+    40%,80%{transform:rotate(10deg)}}
+    @media (max-width:500px){
+      .github-corner:hover .octo-arm{animation:none}
+      .github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}
