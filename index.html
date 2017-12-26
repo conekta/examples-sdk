@@ -4,123 +4,154 @@
   <title>Basic style</title>
   <meta charset="UTF-8">
   <script src="https://cdn.conekta.io/iframe/latest/index.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="./javascript/index.js"></script>
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-  <div class="container">
-    <form id="form-1" autocomplete="on">
-      <div class="field">
-        <input type="text" id="name" placeholder="nombre del tarjeta habiente">
-      </div>
+  <div class="main-container">
+    <header>
+      <img src="./images/logo-dark.png" alt="">
+      <p>Conekta SDK es una tecnología de tokenización de datos sensibles de tarjeta con los mas altos estandares PCI, ademas te permite customizar la interfaz de los componentes con la interfaz de tu formulario</p>      
+    </header>
 
-      <div class="field" id="card-number-1" style="height: 40px">
-      </div>
+    <a href="https://github.com/conekta/examples-sdk" class="github-corner">
+      <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#66a6ff; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm">
+        </path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg>
+    </a>
 
-      <div class="field">
-        <input type="text" id="date" placeholder="MM / YY">
-      </div>
+ <!-- FORM 1 -->
 
-      <div class="field" id="cvc-number-1" style="height: 40px">
-      </div>
+    <div class="container">
+      <form id="form-1" autocomplete="on">
+        <div class="field">
+          <input type="text" id="form-name-1" placeholder="Nombre del tarjeta habiente">
+        </div>
+        <div class="field" id="form-card-1" style="height: 40px"></div>
+        <div class="field" id="form-cvc-1" style="height: 40px"></div>
+        <div class="field-inline">
+          <div class="left">
+            <input type="text" id="form-month-1" placeholder="Mes [02]">
+          </div>
+          <div class="right">
+            <input  type="text" id="form-year-1" placeholder="Año [1994]">
+          </div>
+        </div>
+        <div class="field pay-button">
+          <input type="submit" value='Pay'>
+        </div>
+      </form>
+    </div>
 
-      <div class="field pay-button">
-        <input type="submit" value='Pay'>
-      </div>
-    </form>
-  </div>
+ <!-- FORM 2 -->
 
-  <div class="container">
-    <form id="form-2" autocomplete="on">
-      <div class="field">
-        <label for="name">Nombre del tarjeta habiente</label>
-        <input type="text" id="name" >
-      </div>
-
-      <div class="field" id="card-number-2" style="height: 50px">
+    <div class="container">
+      <form id="form-2" autocomplete="on">
+        <div class="field">
+          <label for="name">Nombre del tarjeta habiente</label>
+          <input type="text" id="form-name-2" >
+        </div>
+        <div class="field" id="form-card-2" style="height: 50px">
           <label for="">Numero de tarjeta</label>
-      </div>
-
-      <div class="field">
-        <label for="date">Fecha de Expiracion (mm/yy)</label>
-        <input type="text" id="date" >
-      </div>
-
-      <div class="field" id="cvc-number-2" style="height: 50px">
+        </div>
+        <div class="field" id="form-cvc-2" style="height: 50px">
           <label for="">Cvc</label>
-      </div>
-
-      <div class="field pay-button">
-        <input type="submit" value='Pay'>
-      </div>
-    </form>
-  </div>
-
-   <div class="container">
-    <form id="form-3" autocomplete="on">
-      <div class="field">
-        <input type="text" id="name" placeholder="Nombre del tarjeta habiente">
-      </div>
-
-      <div class="field" id="card-number-3" style="height: 40px">
-      </div>
-
-      <div class="field-inline">
-        <input class="left" type="text" id="date" placeholder="MM / YY ">
-        <div class="right" id="cvc-number-3" style="height: 40px; display: inline-block;"></div>
-      </div>
-
-
-      <div class="field pay-button">
-        <input type="submit" value='Pay'>
-      </div>
-    </form>
-  </div>
-
-  <div class="container">
-    <form id="form-4" autocomplete="on">
-      <div class="field">
-        <label for="name">Nombre del tarjeta habiente</label>
-        <input type="text" id="name" >
-      </div>
-
-      <div class="field" id="card-number-4" style="height: 40px">
-        <label for="">Numero de tarjeta</label>
-      </div>
-
-      <div class="field-inline">
-        <div class="left">
-          <label for="date">Expiracion (mm/yy)</label>
-          <input  type="text" id="date" >  
         </div>
-        <div class="right">
-          <label for="date">Cvc</label>
-          <div id="cvc-number-4" style="height: 40px; display: inline-block;"></div>
+        <div class="field-inline">
+          <div class="left">
+            <label for="date">Mes</label>
+            <input type="text" id="form-month-2" >
+          </div>
+          <div class="right">
+            <label for="date">Año</label>
+            <input type="text" id="form-year-2" >            
+          </div>
         </div>
-      </div>
-      <div class="field pay-button">
+        <div class="field pay-button">
+          <input type="submit" value='Pay'>
+        </div>
+      </form>
+    </div>
+
+ <!-- FORM 3 -->
+
+    <div class="container">
+      <form id="form-3" autocomplete="on">
+        <div class="field">
+          <input type="text" id="form-name-3" placeholder="Nombre del tarjeta habiente">
+        </div>
+        <div class="field" id="form-card-3" style="height: 40px"></div>
+        <div class="field-inline">
+          <input class="left" type="text" id="form-date-3" placeholder="MM / YYYY " onkeyup="dateMask(this)" maxlength="7">
+          <div class="right" id="form-cvc-3" style="height: 40px; display: inline-block;"></div>
+        </div>
+        <div class="field pay-button">
+          <input type="submit" value='Pay'>
+        </div>
+      </form>
+    </div>
+
+ <!-- FORM 4 -->
+
+    <div class="container">
+      <form id="form-4" autocomplete="on">
+        <div class="field">
+          <label for="name">Nombre del tarjeta habiente</label>
+          <input type="text" id="form-name-4" >
+        </div>
+        <div class="field" id="form-card-4" style="height: 40px">
+          <label for="">Numero de tarjeta</label>
+        </div>
+        <div class="field-inline">
+          <div class="left">
+            <label for="date">Expiracion (mm/yyyy)</label>
+            <input  type="text" id="form-date-4" onkeyup="dateMask(this)" maxlength="7">  
+          </div>
+          <div class="right">
+            <label for="date">Cvc</label>
+            <div id="form-cvc-4" style="height: 40px; display: inline-block;"></div>
+          </div>
+        </div>
+        <div class="field pay-button">
+          <input type="submit" value='Pay'>
+        </div>
+      </form>
+    </div>
+
+ <!-- FORM 5 -->
+
+    <div class="container">
+      <form id="form-5" >
+        <div class="field">
+          <input type="text" id="form-name-5" placeholder="Nombre del tarjeta habiente">
+        </div>
+        <div class="field-inline">
+         <div class="grid-2" id="form-card-5" style="height: 40px; display:  inline-block;"></div>
+         <input class="grid-1"  type="text" id="form-date-5" placeholder="MM/YYYY" maxlength="7" onkeyup="dateMask(this)">  
+         <div class="grid-1" id="form-cvc-5" style="height: 40px; display: inline-block;"></div>
+       </div>
+
+       <div class="field pay-button">
         <input type="submit" value='Pay'>
       </div>
     </form>
   </div>
-
-  <div class="container">
-    <form id="form-5" >
-      <div class="field">
-        <input type="text" id="name" placeholder="Tarjeta habiente">
-      </div>
-
-      <div class="field-inline">
-         <div class="grid-2" id="card-number-5" style="height: 40px; display:  inline-block;"></div>
-          <input class="grid-1"  type="text" id="date-custom" placeholder="MM / YY">  
-          <div class="grid-1" id="cvc-number-5" style="height: 40px; display: inline-block;"></div>
-      </div>
-
-      <div class="field pay-button">
-        <input type="submit" value='Pay'>
-      </div>
-    </form>
-  </div>
-
+</div>
+<script>
+  function dateMask(elem) {
+    string = elem.value
+    if (string.length == 2 && !isBackSpaceKey(event.keyCode)){
+      elem.value = string.replace(/(\d{2})/,"$1/")
+    }else {
+      elem.value = string.replace(/(\d{2})(\d{4})/,"$1/$2")      
+    }
+  }
+  function isBackSpaceKey(key){
+    return (key == 8 || key == 46 || key == 37 || key == 39)
+  }
+</script>
 </body>
 </html>

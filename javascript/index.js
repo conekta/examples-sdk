@@ -1,5 +1,5 @@
 window.onload = function () {
-
+  
   var conektaOne = window.Conekta
   var conektaTwo = window.Conekta
   var conektathree = window.Conekta
@@ -8,7 +8,7 @@ window.onload = function () {
 
   conektaOne.init('key_GyzteDtNTx36v2vYU3kzBXg', {
     cardNumber: {
-      id: 'card-number-1',
+      id: 'form-card-1',
       style: {
         'padding': '5px 10px',
         'font-size': '15px',
@@ -18,20 +18,20 @@ window.onload = function () {
       placeholder: 'Numero de tarjeta'
     },
     cvc: {
-      id: 'cvc-number-1',
+      id: 'form-cvc-1',
       style: {
         'padding': '5px 10px',
         'border': '1px solid rgb(204, 204, 204)',
         'border-radius': '5px',
         'font-size': '15px',
       },
-      placeholder: 'Cvv'
+      placeholder: 'Cvc'
     },
   })
 
   conektaTwo.init('key_GyzteDtNTx36v2vYU3kzBXg', {
     cardNumber: {
-      id: 'card-number-2',
+      id: 'form-card-2',
       style: {
         'padding': '5px 10px',
         'font-size': '15px',
@@ -41,7 +41,7 @@ window.onload = function () {
       placeholder: ' '
     },
     cvc: {
-      id: 'cvc-number-2',
+      id: 'form-cvc-2',
       style: {
         'padding': '5px 10px',
         'border': '1px solid rgb(204, 204, 204)',
@@ -54,7 +54,7 @@ window.onload = function () {
 
     conektathree.init('key_GyzteDtNTx36v2vYU3kzBXg', {
     cardNumber: {
-      id: 'card-number-3',
+      id: 'form-card-3',
       style: {
         'padding': '5px 10px',
         'font-size': '15px',
@@ -64,21 +64,21 @@ window.onload = function () {
       placeholder: 'Numero de tarjeta'
     },
     cvc: {
-      id: 'cvc-number-3',
+      id: 'form-cvc-3',
       style: {
         'padding': '5px 10px',
         'border': '1px solid rgb(204, 204, 204)',
         'border-radius': '5px',
         'font-size': '15px',
       },
-      placeholder: 'Cvv'
+      placeholder: 'Cvc'
     },
   })
 
 
     conektaFour.init('key_GyzteDtNTx36v2vYU3kzBXg', {
     cardNumber: {
-      id: 'card-number-4',
+      id: 'form-card-4',
       style: {
         'padding': '5px 10px',
         'font-size': '15px',
@@ -88,7 +88,7 @@ window.onload = function () {
       placeholder: ' '
     },
     cvc: {
-      id: 'cvc-number-4',
+      id: 'form-cvc-4',
       style: {
         'padding': '5px 10px',
         'border': '1px solid rgb(204, 204, 204)',
@@ -100,7 +100,7 @@ window.onload = function () {
   })
   conektaFive.init('key_GyzteDtNTx36v2vYU3kzBXg', {
     cardNumber: {
-      id: 'card-number-5',
+      id: 'form-card-5',
       style: {
         'padding': '5px 10px',
         'font-size': '15px',
@@ -112,7 +112,7 @@ window.onload = function () {
       placeholder: 'Card '
     },
     cvc: {
-      id: 'cvc-number-5',
+      id: 'form-cvc-5',
       style: {
         'padding': '5px 10px',
         'font-size': '15px',
