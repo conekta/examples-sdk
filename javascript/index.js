@@ -75,7 +75,6 @@ window.onload = function () {
     },
   })
 
-
     conektaFour.init('key_GyzteDtNTx36v2vYU3kzBXg', {
     cardNumber: {
       id: 'form-card-4',
@@ -125,30 +124,108 @@ window.onload = function () {
     },
   })
 
-  //TODO - Put logic to get all forms work
-  var form = document.getElementById('form-1')
+  var form1 = document.getElementById('form-1');
+  var form2 = document.getElementById('form-2');
+  var form3 = document.getElementById('form-3');
+  var form4 = document.getElementById('form-4');
+  var form5 = document.getElementById('form-5');
 
-  form.onsubmit = (event) => {
+  form1.onsubmit = (event) => {
     event.preventDefault()
-    var button = document.getElementById('tokenize-btn')
-    var name   = document.getElementById('tarjetahabiente')
-    var month  = document.getElementById('month') 
-    var year  = document.getElementById('year') 
-    // button.disabled = true
-    console.log(month.value);
-    console.log(year.value);
-    window.Conekta.tokenize({
-      name: name.value,
-      expMonth: month.value,
-      expYear: year.value
+    let formName   = document.getElementById('form-name-1')
+    let formMonth  = document.getElementById('form-month-1') 
+    let formYear   = document.getElementById('form-year-1') 
+    
+    conektaOne.tokenize({
+      name:     formName.value,
+      expMonth: formMonth.value,
+      expYear:  formYear.value
+
     }, function (err, token) {
-      if (err) {
-        console.log(err);
-        window.alert('error ' + err)
-      } else {
-        window.alert('token: ' + token.id)
-      }
-    })
+      triggerAction(err, token, 1)
+   })
   }
 
+  form2.onsubmit = (event) => {
+    event.preventDefault()
+    let formName   = document.getElementById('form-name-2')
+    let formMonth  = document.getElementById('form-month-2') 
+    let formYear   = document.getElementById('form-year-2') 
+    
+    conektaTwo.tokenize({
+      name:     formName.value,
+      expMonth: formMonth.value,
+      expYear:  formYear.value
+
+    }, function (err, token) {
+      triggerAction(err, token, 2)
+   })
+  }
+
+  form3.onsubmit = (event) => {
+    event.preventDefault()
+    let formName  = document.getElementById('form-name-3')
+    let date      = document.getElementById('form-date-3').value.split('/')
+
+
+    conektathree.tokenize({
+      name:     formName.value,
+      expMonth: date[0],
+      expYear:  date[1]
+
+    }, function (err, token) {
+      triggerAction(err, token, 3)
+   })
+  }
+
+  form4.onsubmit = (event) => {
+    event.preventDefault()
+    let formName = document.getElementById('form-name-4')
+    let date     = document.getElementById('form-date-4').value.split('/')
+
+    
+    conektaFour.tokenize({
+      name:     formName.value,
+      expMonth: date[0],
+      expYear:  date[1]
+
+    }, function (err, token) {
+      triggerAction(err, token, 4)
+   })
+  }
+
+  form5.onsubmit = (event) => {
+    event.preventDefault()
+    let formName = document.getElementById('form-name-1')
+    let date     = document.getElementById('form-date-5').value.split('/')
+    
+    conektaFive.tokenize({
+      name:     formName.value,
+      expMonth: date[0],
+      expYear:  date[1]
+
+    }, function (err, token) {
+      triggerAction(err, token, 5)
+   })
+  }
+
+function triggerAction (err, token, formNumber) {
+  if (err){
+      document.getElementById('form-token-'+formNumber).style.visibility = 'hidden'
+      document.getElementById('form-errors-'+formNumber).style.visibility = 'visible'
+      document.getElementById('form-errors-'+formNumber).style.opacity    = '1'         
+      if (!err.card) {
+        document.getElementById('form-errors-'+formNumber).innerHTML = '</div> The card number is invalid</div>';
+      }else if (!err.cvc) {
+        document.getElementById('form-errors-'+formNumber).innerHTML = '</div> The cvc is invalid</div>';
+      } else if (!err.date) {
+        document.getElementById('form-errors-'+formNumber).innerHTML = '</div> The date format is invalid</div>';
+      }
+    } else {
+      document.getElementById('form-errors-'+formNumber).style.visibility = 'hidden'
+      document.getElementById('form-token-'+formNumber).style.visibility = 'visible'
+      document.getElementById('form-token-'+formNumber).style.opacity    = '1'         
+      document.getElementById('form-token-'+formNumber).innerHTML = '</div> token id :'+token.id+'</div>';
+    }
+  }
 }

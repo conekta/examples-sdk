@@ -21,6 +21,7 @@
     width: 800px;
     margin: 0 auto;
   }
+/*############## START FORM CSS #################*/
   .field-inline input, .field input {
     width: 100%;
     font-size: 16px;
@@ -103,6 +104,23 @@
   }
   .github-corner:hover .octo-arm{
     animation:octocat-wave 560ms ease-in-out
+  }
+  .token, .errors{
+    margin-top: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+  .token{
+    padding: 5px;
+    border-left: 5px solid #66a6ff;
+    background: #66a6fc38;
+  }
+  .errors {
+    border-left:2px solid #ee6030;
+    background: #f9d6d0;
+    color: #ee6030;
+    padding: 7px;
   }
   @keyframes octocat-wave{
     0%,100%{transform:rotate(0)}

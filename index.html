@@ -28,22 +28,24 @@
     <div class="container">
       <form id="form-1" autocomplete="on">
         <div class="field">
-          <input type="text" id="form-name-1" placeholder="Nombre del tarjeta habiente">
+          <input type="text" id="form-name-1" placeholder="Nombre del tarjeta habiente" required>
         </div>
         <div class="field" id="form-card-1" style="height: 40px"></div>
         <div class="field" id="form-cvc-1" style="height: 40px"></div>
         <div class="field-inline">
           <div class="left">
-            <input type="text" id="form-month-1" placeholder="Mes [02]">
+            <input type="text" id="form-month-1" placeholder="Mes [02]" required>
           </div>
           <div class="right">
-            <input  type="text" id="form-year-1" placeholder="Año [1994]">
+            <input  type="text" id="form-year-1" placeholder="Año [1994]" required>
           </div>
         </div>
         <div class="field pay-button">
-          <input type="submit" value='Pay'>
+          <input id="form-button-1" type="submit" value='Pay'>
         </div>
       </form>
+      <div class="errors" id="form-errors-1"></div>
+      <div class="token" id="form-token-1"></div>
     </div>
 
  <!-- FORM 2 -->
@@ -52,7 +54,7 @@
       <form id="form-2" autocomplete="on">
         <div class="field">
           <label for="name">Nombre del tarjeta habiente</label>
-          <input type="text" id="form-name-2" >
+          <input type="text" id="form-name-2" required>
         </div>
         <div class="field" id="form-card-2" style="height: 50px">
           <label for="">Numero de tarjeta</label>
@@ -63,17 +65,19 @@
         <div class="field-inline">
           <div class="left">
             <label for="date">Mes</label>
-            <input type="text" id="form-month-2" >
+            <input type="text" id="form-month-2" required>
           </div>
           <div class="right">
             <label for="date">Año</label>
-            <input type="text" id="form-year-2" >            
+            <input type="text" id="form-year-2" required>            
           </div>
         </div>
         <div class="field pay-button">
-          <input type="submit" value='Pay'>
+          <input type="submit" value="Pay">
         </div>
       </form>
+      <div class="errors" id="form-errors-2"></div>
+      <div class="token" id="form-token-2"></div>
     </div>
 
  <!-- FORM 3 -->
@@ -81,17 +85,19 @@
     <div class="container">
       <form id="form-3" autocomplete="on">
         <div class="field">
-          <input type="text" id="form-name-3" placeholder="Nombre del tarjeta habiente">
+          <input type="text" id="form-name-3" placeholder="Nombre del tarjeta habiente" required>
         </div>
         <div class="field" id="form-card-3" style="height: 40px"></div>
         <div class="field-inline">
-          <input class="left" type="text" id="form-date-3" placeholder="MM / YYYY " onkeyup="dateMask(this)" maxlength="7">
+          <input class="left" type="text" id="form-date-3" placeholder="MM / YYYY " onkeyup="dateMask(this)" maxlength="7" required>
           <div class="right" id="form-cvc-3" style="height: 40px; display: inline-block;"></div>
         </div>
         <div class="field pay-button">
-          <input type="submit" value='Pay'>
+          <input type="submit" value="Pay">
         </div>
       </form>
+      <div class="errors" id="form-errors-3"></div>
+      <div class="token" id="form-token-3"></div>
     </div>
 
  <!-- FORM 4 -->
@@ -100,7 +106,7 @@
       <form id="form-4" autocomplete="on">
         <div class="field">
           <label for="name">Nombre del tarjeta habiente</label>
-          <input type="text" id="form-name-4" >
+          <input type="text" id="form-name-4" required>
         </div>
         <div class="field" id="form-card-4" style="height: 40px">
           <label for="">Numero de tarjeta</label>
@@ -108,7 +114,7 @@
         <div class="field-inline">
           <div class="left">
             <label for="date">Expiracion (mm/yyyy)</label>
-            <input  type="text" id="form-date-4" onkeyup="dateMask(this)" maxlength="7">  
+            <input  type="text" id="form-date-4" onkeyup="dateMask(this)" maxlength="7" required>  
           </div>
           <div class="right">
             <label for="date">Cvc</label>
@@ -119,6 +125,8 @@
           <input type="submit" value='Pay'>
         </div>
       </form>
+      <div class="errors" id="form-errors-4"></div>
+      <div class="token" id="form-token-4"></div>
     </div>
 
  <!-- FORM 5 -->
@@ -126,18 +134,19 @@
     <div class="container">
       <form id="form-5" >
         <div class="field">
-          <input type="text" id="form-name-5" placeholder="Nombre del tarjeta habiente">
+          <input type="text" id="form-name-5" placeholder="Nombre del tarjeta habiente" required>
         </div>
         <div class="field-inline">
          <div class="grid-2" id="form-card-5" style="height: 40px; display:  inline-block;"></div>
-         <input class="grid-1"  type="text" id="form-date-5" placeholder="MM/YYYY" maxlength="7" onkeyup="dateMask(this)">  
+         <input class="grid-1"  type="text" id="form-date-5" placeholder="MM/YYYY" maxlength="7" onkeyup="dateMask(this)" required>  
          <div class="grid-1" id="form-cvc-5" style="height: 40px; display: inline-block;"></div>
-       </div>
-
+        </div>
        <div class="field pay-button">
         <input type="submit" value='Pay'>
       </div>
     </form>
+    <div class="errors" id="form-errors-5"></div>
+    <div class="token" id="form-token-5"></div>
   </div>
 </div>
 <script>
