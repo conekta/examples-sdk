@@ -7,7 +7,7 @@ window.onload = function () {
   var conektaFive = window.Conekta
 
   conektaOne.init('key_GyzteDtNTx36v2vYU3kzBXg', {
-    cardNumber: {
+    card: {
       id: 'form-card-1',
       style: {
         'padding': '5px 10px',
@@ -30,7 +30,7 @@ window.onload = function () {
   })
 
   conektaTwo.init('key_GyzteDtNTx36v2vYU3kzBXg', {
-    cardNumber: {
+    card: {
       id: 'form-card-2',
       style: {
         'padding': '5px 10px',
@@ -53,7 +53,7 @@ window.onload = function () {
   })
 
     conektathree.init('key_GyzteDtNTx36v2vYU3kzBXg', {
-    cardNumber: {
+    card: {
       id: 'form-card-3',
       style: {
         'padding': '5px 10px',
@@ -76,7 +76,7 @@ window.onload = function () {
   })
 
     conektaFour.init('key_GyzteDtNTx36v2vYU3kzBXg', {
-    cardNumber: {
+    card: {
       id: 'form-card-4',
       style: {
         'padding': '5px 10px',
@@ -98,7 +98,7 @@ window.onload = function () {
     },
   })
   conektaFive.init('key_GyzteDtNTx36v2vYU3kzBXg', {
-    cardNumber: {
+    card: {
       id: 'form-card-5',
       style: {
         'padding': '5px 10px',
